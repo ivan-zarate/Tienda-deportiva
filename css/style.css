@@ -1,0 +1,695 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.logo img {
+    max-height: 80px;
+    margin-top: 4px;
+}
+
+/* Diagramamos el index con grid */
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr .5fr 4fr 2.6fr 4.8fr .5fr;
+    grid-template-areas:
+        "header header nav nav"
+        "banner banner banner banner"
+        "seccion1 seccion1 seccion1 seccion1"
+        "seccion2 seccion2 seccion2 seccion2"
+        "seccion3 seccion3 seccion3 seccion3"
+        "footer footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+}
+
+.nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: center;
+}
+
+.nav ul {
+    margin: top 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav li {
+    list-style: none;
+    text-align: center;
+    margin: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav a:hover {
+    color: yellow;
+}
+
+.banner {
+    grid-area: banner;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner a {
+    margin-bottom: 5px;
+    border: 2px solid black;
+    padding: 0.1em 1em;
+    text-decoration: none;
+    border-radius: 50px;
+    color: white;
+    background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.banner a:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+/* Terminamos de acomodar y dar estilo al header */
+/* Empezamos a trabajar la primera seccion */
+.seccion1 {
+    grid-area: seccion1;
+    background: url("../img/index.png") no-repeat fixed;
+    background-size: cover;
+}
+
+.descuentos {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    color: darkblue;
+}
+
+.promociones {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .8fr .8fr;
+}
+
+.promociones div,
+.promociones-genero div {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promociones img,
+.promociones-genero img {
+    border: solid 1px black;
+    max-width: 10em;
+    max-height: 10em;
+}
+
+.sindescuento {
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+.condescuento {
+    text-decoration: solid;
+    font-size: 1em;
+    margin-left: 0.5em;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+
+/* Terminamos de acomodar y dar estilo a la seccion1 */
+/* Empezamos a trabajar la segunda seccion */
+.seccion2 {
+    grid-area: seccion2;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.seccion2 p {
+    margin: 10px;
+    color: darkblue;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.seccion2 ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.seccion2 li {
+    list-style: none;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.seccion2 ul li img {
+    border: solid 1px black;
+    max-width: 10em;
+    max-height: 10em;
+}
+
+/* Terminamos de acomodar y dar estilo a la seccion2 */
+/* Empezamos a trabajar la tercera seccion */
+.seccion3 {
+    grid-area: seccion3;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: url("../img/index.png") no-repeat fixed;
+    background-size: cover;
+}
+
+h2 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 2em;
+}
+
+.parrafo {
+    font-size: 20px;
+    padding: 15px 60px 45px 60px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Terminamos de acomodar y dar estilo a la seccion3 */
+/* Empezamos a trabajar el footer */
+.footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer li {
+    padding: 15px;
+}
+
+.footer ul li img {
+    border: solid 1px black;
+    max-width: 2em;
+    max-height: 2em;
+}
+
+/* Terminamos de acomodar y dar estilo al footer */
+/* Empezamos a trabajar con los html hombre, mujer y niños */
+/* Diagramamos los html de acuerdo a nuestra necesidad */
+.grilla-genero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .3fr 1fr 3.5fr .4fr .5fr;
+    grid-template-areas:
+        "header header nav nav"
+        "introduccion introduccion introduccion introduccion"
+        "fondo-genero fondo-genero fondo-genero fondo-genero"
+        "fondo-pago fondo-pago fondo-pago fondo-pago "
+        "footer footer footer footer";
+}
+
+/* Empezamos a trabajar con la linea introduccion */
+.introduccion {
+    grid-area: introduccion;
+    display: flex;
+    flex-direction: row;
+    background-image: repeating-radial-gradient(circle at 0 0, transparent 0, #e8e6f7 13px), repeating-linear-gradient(darkblue, red);
+    border: 2px solid black;
+}
+
+.introduccion img {
+    width: 300px;
+    height: 200px;
+}
+
+.introduccion p {
+    margin-left: 450px;
+    margin-top: 70px;
+    font-size: 50px;
+    font-family: 'Grape Nuts', cursive;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+/* Terminamos de acomdar y dar estilo a la linea introduccion */
+/* Ahora diagramaremos los productos que eligimos */
+.fondo-genero {
+    grid-area: fondo-genero;
+}
+
+.promociones-genero {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .8fr .8fr .8fr;
+}
+
+.zapatillas {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.promociones-genero select {
+    background-color: blanchedalmond;
+}
+
+/* En est punto ya terminamos de diagramar las promociones */
+/* Empezamos a trabar la linea fondo-pago */
+.fondo-pago {
+    grid-area: fondo-pago;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fondo-pago p {
+    padding-bottom: 10px;
+    font-weight: bolder;
+}
+
+/* Ya terminamos de dar estilo y acomodar los html hombre, mujer y niñes */
+/* Empezamos a trabajar con el html contacto, para esto tambien apliacaremos el concepto de grillas */
+.grilla-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 2fr 2fr .5fr;
+    grid-template-areas:
+        "header header nav nav"
+        "contacto contacto unirse unirse"
+        "contacto contacto unirse unirse"
+        "footer footer footer footer";
+}
+
+/* Empezamos a trabajar las columnas contacto */
+.contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-left: 90px;
+    background: url("../img/contacto.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.contacto h1 {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    font-style: italic;
+    font-size: 35px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+h3 {
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.contacto p {
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.contacto a {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    color: rgb(38, 99, 2);
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    margin-right: 165px;
+}
+
+.contacto input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    margin-top: 10px;
+}
+
+.submit {
+    background-color: white;
+    padding: 3px 8px 3px 8px;
+    margin-left: 165px;
+    margin-right: 165px;
+}
+
+.submit:hover {
+    background-color: rgb(244, 248, 16);
+    color: black;
+}
+
+/* Terminamos de acomodar y dar estilo a la primera parte del html contacto */
+/* Empezamos a trabajar la segunda seccion ("unirse") */
+.unirse {
+    grid-area: unirse;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: url("../img/contacto.jpeg") no-repeat fixed;
+    background-size: cover;
+}
+
+.unirse h1 {
+    font-family: 'Grape Nuts', cursive;
+    font-size: 50px;
+    padding-bottom: 30px;
+}
+
+.unirse form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.datos {
+    padding-bottom: 10px;
+}
+
+.identidad {
+    padding: 8px;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.datos input {
+    padding: 8px;
+}
+
+.datos span {
+    font-weight: bold;
+}
+
+.datos div {
+    margin: 10px;
+}
+
+.check {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    text-align: left;
+}
+
+.check div {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.check div p {
+    margin-left: 5px;
+}
+
+.submit2 {
+    border-radius: 50px;
+    padding: 8px 15px 8px 15px;
+    font-family: 'Grape Nuts', cursive;
+    font-size: 25px;
+    margin-left: 250px;
+    margin-right: 250px;
+    font-weight: bold;
+    background-color: white;
+}
+
+.submit2:hover {
+    background-color: rgb(244, 248, 16);
+    color: black;
+}
+
+/* Terminamos de acomodar la ultima parte del html contacto */
+/* Ahora haremos que nuestras paginas sean responsive para mobile */
+@media (max-width:320px) {
+
+    /* Diagramamos la nueva grilla del index */
+    .grilla {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .4fr .2fr .5fr 4fr 3.5fr 4.5fr .5fr;
+        grid-template-areas:
+            "header header header header"
+            "banner banner banner banner"
+            "nav nav nav nav"
+            "seccion1 seccion1 seccion1 seccion1"
+            "seccion2 seccion2 seccion2 seccion2"
+            "seccion3 seccion3 seccion3 seccion3"
+            "footer footer footer footer";
+    }
+
+    .banner {
+        font-size: 7px;
+        text-align: center;
+    }
+
+    .banner a {
+        font-size: 15px;
+    }
+
+    .header {
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: left;
+        padding-left: 10px;
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav li {
+        list-style: none;
+        text-align: center;
+        margin: 2px;
+    }
+
+    /* Hasta este punto ya trabajamos el header mobile */
+    /* Ahora empezamos a modificar lo que necesitemos de las distintas secciones del index */
+    .promociones {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: .8fr .8fr .8fr .8fr .8fr;
+    }
+
+    .descuentos {
+        font-size: 1em;
+    }
+
+    .promociones img,
+    .promociones-genero img {
+        max-width: 5em;
+        max-height: 5em;
+    }
+
+    .seccion2 ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seccion2 li {
+        margin-top: 5px;
+        padding: 10px;
+    }
+
+    .seccion2 ul li img {
+        max-width: 15em;
+        max-height: 15em;
+    }
+
+    .seccion2 img {
+        max-width: 7em;
+        max-height: 7em;
+    }
+
+    .seccion3 p {
+        font-size: 18px;
+    }
+
+    .seccion3 iframe {
+        max-width: 18em;
+        max-height: 12em;
+    }
+
+    /* Terminamos de dar el nuevo estilo al index para que se pueda reproducir en aspecto mobile*/
+    /* Ahora diagramaremos la nueva grilla de los html hombre, mujer y niños */
+    .grilla-genero {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .4fr .4fr 1fr 6fr .7fr .5fr;
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "introduccion introduccion introduccion introduccion"
+            "fondo-genero fondo-genero fondo-genero fondo-genero"
+            "fondo-pago fondo-pago fondo-pago fondo-pago "
+            "footer footer footer footer";
+    }
+
+    /* Ahora empezamos a modificar lo que necesitemos de las distintas secciones de hombre, mujer y niños */
+    .introduccion {
+        grid-area: introduccion;
+        display: flex;
+        flex-direction: row;
+        background-image: none;
+        border: 2px solid black;
+    }
+
+    .introduccion img {
+        width: 20em;
+        height: 10em;
+    }
+
+    .introduccion p {
+        display: none;
+    }
+
+    .fondo-genero {
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+
+    /* Diagramamos una nueva grilla para los productos incluidos en nuestros html */
+    .promociones-genero {
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: .8fr .8fr .8fr .8fr .8fr;
+    }
+
+    .condescuento {
+        text-decoration: solid;
+        font-size: 1em;
+        margin-left: 0.1em;
+        font-style: italic;
+        font-weight: bold;
+        color: red;
+    }
+
+    .promociones-genero form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .promociones-genero select {
+        margin: 5px;
+        display: flex;
+        text-align: center;
+    }
+
+    .fondo-pago img {
+        max-width: 10em;
+        max-height: 10em;
+    }
+
+    .fondo-pago {
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+    }
+
+    .fondo-pago p {
+        margin-top: 15px;
+        padding-bottom: 10px;
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    /* Ya terminamos de hacer responsive mobile a los html mujer, hombre y niños */
+    /* Ahora vamos a hacer responsive al html contacto */
+    .grilla-contacto {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: .3fr .4fr 2fr 2fr .4fr;
+        grid-template-areas:
+            "header header header header"
+            "nav nav nav nav"
+            "contacto contacto contacto contacto"
+            "unirse unirse unirse unirse"
+            "footer footer footer footer";
+    }
+
+    .contacto {
+        padding-left: 25px;
+    }
+
+    .contacto form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 2px;
+        margin-right: 0px;
+    }
+
+    .contacto input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    textarea {
+        margin-top: 10px;
+    }
+
+    .submit {
+        margin-left: 105px;
+        margin-right: 0px;
+    }
+
+    .datos input {
+        padding: 8px;
+        margin: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+}
