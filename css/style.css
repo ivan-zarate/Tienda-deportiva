@@ -494,7 +494,7 @@ textarea:focus{
     background-color: rgb(244, 248, 16);
     color: black;
     transform: scale(1.3,1.3);
-    transition: .3s;
+    transition: .4s;
 }
 
 /* Terminamos de acomodar la ultima parte del html contacto */
