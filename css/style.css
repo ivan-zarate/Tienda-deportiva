@@ -57,6 +57,7 @@
 
 .nav a:hover {
     color: yellow;
+    
 }
 
 .banner {
@@ -76,11 +77,15 @@
     color: white;
     background-color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 .banner a:hover {
     background-color: aliceblue;
     color: black;
+    /* Agregamos animaciones */
+    transform: scale(1.2);
+    transition: .3s;
 }
 
 /* Terminamos de acomodar y dar estilo al header */
@@ -120,6 +125,13 @@
     border: solid 1px black;
     max-width: 10em;
     max-height: 10em;
+}
+/* Agregamos animaciones */
+.promociones img:hover,
+.promociones-genero img:hover {
+    transform: scale(1.2);
+    transition: .3s;
+    border: solid 2px red;
 }
 
 .sindescuento {
@@ -168,6 +180,10 @@
     border: solid 1px black;
     max-width: 10em;
     max-height: 10em;
+}
+.seccion2 ul li img:hover{
+    transform: scale(1.2);
+    transition: .3s;
 }
 
 /* Terminamos de acomodar y dar estilo a la seccion2 */
@@ -359,9 +375,21 @@ h3 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+/* Agregamos animaciones */
+.contacto input:focus {
+    border: solid 2px darkblue;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+}
 
 textarea {
     margin-top: 10px;
+}
+/* Agregamos animaciones */
+textarea:focus{
+    border: solid 2px darkblue;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
 .submit {
@@ -412,7 +440,14 @@ textarea {
 }
 
 .datos input {
+    border: solid 2px transparent;
     padding: 8px;
+}
+
+.datos input:focus {
+    border: solid 2px darkblue;
+    outline: none;
+    box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
 }
 
 .datos span {
@@ -454,10 +489,12 @@ textarea {
     font-weight: bold;
     background-color: white;
 }
-
+/* Agregamos animaciones de aumento */
 .submit2:hover {
     background-color: rgb(244, 248, 16);
     color: black;
+    transform: scale(1.3,1.3);
+    transition: .3s;
 }
 
 /* Terminamos de acomodar la ultima parte del html contacto */
